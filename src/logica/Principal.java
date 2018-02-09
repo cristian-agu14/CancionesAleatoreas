@@ -20,17 +20,59 @@ public class Principal {
 
 	private static boolean estadoJ;
 
-	private static int cantidadDecanciones = 0;
+	private static boolean bandera = false;
+
+	static int aux = 0;
 
 	public Principal() {
 		super();
 
 	}
 
-	// public static void main(String args[]) {
-	// readTxt();
-	// probarArray();
-	// }
+	 public static void main(String args[]) {
+	 // readTxt();
+	 probarArray();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	 buscarCancionPorId();
+	
+	 }
 
 	public static BufferedReader getBuffered(String link) {
 
@@ -50,7 +92,7 @@ public class Principal {
 		return br;
 	}
 
-	public static void readTxt() {
+	public static int readTxt() {
 		try {
 
 			String ruta = "C:/lista.txt";
@@ -78,11 +120,13 @@ public class Principal {
 
 			}
 
-			cantidadDecanciones = listaCanciones.size();
+			// cantidadDecanciones = listaCanciones.size() + 1;
+			// System.out.println(cantidadDecanciones+"tamaño +1111111");
 
 		} catch (IOException | NumberFormatException e) {
 			e.printStackTrace();
 		}
+		return listaCanciones.size();
 	}
 
 	/**
@@ -91,26 +135,96 @@ public class Principal {
 	 * 
 	 * @return objeto de una cancion
 	 */
-	public Cancion buscarCancionPorId() {
+	public static Cancion buscarCancionPorId() {
 		int id = 0;
-		readTxt();
 		Cancion auxCan = new Cancion(0, "", "", false);
-		id = (int) (Math.random() * (cantidadDecanciones + 1));
-		for (int i = 0; i < listaCanciones.size(); i++) {
-			auxCan = listaCanciones.get(i);
-			if (auxCan.getId() == id) {
-				listaCanciones.remove(i);
-				return auxCan;
-			}
+		if (bandera == false) {
+			aux = readTxt();
+			bandera = true;
 		}
+		//final int cantidadDecanciones = aux;// listaCanciones.size();
+		int cantidadDecanciones = aux;
+		id = (int) (Math.random() * cantidadDecanciones);
+		
+		auxCan = listaCanciones.get(id);
+		listaCanciones.remove(id);
+		
+
+//		for (int i = 0; i < listaCanciones.size(); i++) {
+//			
+//			auxCan = listaCanciones.get(i);
+//			if (auxCan.getId() == id) {
+//				listaCanciones.remove(i);
+//				System.out.println(auxCan.getNombre());
+//				return auxCan;
+//			}
+//		
+//		 }
+		aux --;
 		return auxCan;
 	}
+
+	// public boolean comprovarYaSalio(int numeroRamdom, int tamaño) {
+	//
+	// int [] arreglo= new int [cantidadDecanciones];
+	// for (int i = 0; i < arreglo.length; i++) {
+	// arreglo[i]=id;
+	// }
+	// }
 
 	public static void probarArray() {
 		System.out.println("tamañooooooo = " + listaCanciones.size());
 		for (int i = 0; i < listaCanciones.size(); i++) {
 			System.out.println(listaCanciones.get(i));
 		}
+	}
+
+	public static Cancion getCancion() {
+		return cancion;
+	}
+
+	public static void setCancion(Cancion cancion) {
+		Principal.cancion = cancion;
+	}
+
+	public static ArrayList<Cancion> getListaCanciones() {
+		return listaCanciones;
+	}
+
+	public static void setListaCanciones(ArrayList<Cancion> listaCanciones) {
+		Principal.listaCanciones = listaCanciones;
+	}
+
+	public static int getId() {
+		return id;
+	}
+
+	public static void setId(int id) {
+		Principal.id = id;
+	}
+
+	public static String getNombre() {
+		return nombre;
+	}
+
+	public static void setNombre(String nombre) {
+		Principal.nombre = nombre;
+	}
+
+	public static String getCantante() {
+		return cantante;
+	}
+
+	public static void setCantante(String cantante) {
+		Principal.cantante = cantante;
+	}
+
+	public static boolean isEstadoJ() {
+		return estadoJ;
+	}
+
+	public static void setEstadoJ(boolean estadoJ) {
+		Principal.estadoJ = estadoJ;
 	}
 
 }

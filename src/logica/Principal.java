@@ -29,50 +29,50 @@ public class Principal {
 
 	}
 
-	 public static void main(String args[]) {
-	 // readTxt();
-	 probarArray();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	 buscarCancionPorId();
-	
-	 }
+//	public static void main(String args[]) {
+//		// readTxt();
+//		// probarArray();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//		buscarCancionPorId();
+//
+//	}
 
 	public static BufferedReader getBuffered(String link) {
 
@@ -136,31 +136,36 @@ public class Principal {
 	 * @return objeto de una cancion
 	 */
 	public static Cancion buscarCancionPorId() {
+
 		int id = 0;
 		Cancion auxCan = new Cancion(0, "", "", false);
 		if (bandera == false) {
 			aux = readTxt();
 			bandera = true;
 		}
-		//final int cantidadDecanciones = aux;// listaCanciones.size();
-		int cantidadDecanciones = aux;
-		id = (int) (Math.random() * cantidadDecanciones);
-		
-		auxCan = listaCanciones.get(id);
-		listaCanciones.remove(id);
-		
+		if (aux > 0) {
+			// final int cantidadDecanciones = aux;// listaCanciones.size();
+			int cantidadDecanciones = aux;
+			id = (int) (Math.random() * cantidadDecanciones);
 
-//		for (int i = 0; i < listaCanciones.size(); i++) {
-//			
-//			auxCan = listaCanciones.get(i);
-//			if (auxCan.getId() == id) {
-//				listaCanciones.remove(i);
-//				System.out.println(auxCan.getNombre());
-//				return auxCan;
-//			}
-//		
-//		 }
-		aux --;
+			auxCan = listaCanciones.get(id);
+			System.out.println(auxCan.getNombre() + "-->" + id);
+			listaCanciones.remove(id);
+
+			// for (int i = 0; i < listaCanciones.size(); i++) {
+			//
+			// auxCan = listaCanciones.get(i);
+			// if (auxCan.getId() == id) {
+			// listaCanciones.remove(i);
+			// System.out.println(auxCan.getNombre());
+			// return auxCan;
+			// }
+			//
+			// }
+		}else {
+			aux=readTxt();
+		}
+		aux--;
 		return auxCan;
 	}
 
@@ -172,12 +177,12 @@ public class Principal {
 	// }
 	// }
 
-	public static void probarArray() {
-		System.out.println("tamañooooooo = " + listaCanciones.size());
-		for (int i = 0; i < listaCanciones.size(); i++) {
-			System.out.println(listaCanciones.get(i));
-		}
-	}
+	// public static void probarArray() {
+	// System.out.println("tamañooooooo = " + listaCanciones.size());
+	// for (int i = 0; i < listaCanciones.size(); i++) {
+	// System.out.println(listaCanciones.get(i));
+	// }
+	// }
 
 	public static Cancion getCancion() {
 		return cancion;

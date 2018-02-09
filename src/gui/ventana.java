@@ -58,25 +58,24 @@ public class ventana extends JFrame {
 		
 
 		JPanel panel = new JPanel();
-		panel.setBounds(23, 29, 401, 135);
+		panel.setBounds(23, 29, 411, 135);
 		contentPane.add(panel);
 		panel.setLayout(null);
 
-		JLabel lblNewLabel = new JLabel("New label");
+		JLabel lblNewLabel = new JLabel("Hola Amigos");
 		lblNewLabel.setFont(new Font("Comic Sans MS", Font.PLAIN, 30));
-		lblNewLabel.setBounds(20, 11, 357, 113);
+		lblNewLabel.setBounds(20, 11, 381, 113);
 		panel.add(lblNewLabel);
 
 		JButton btnSiguiente = new JButton("SIGUIENTE");
 		btnSiguiente.setFont(new Font("Comic Sans MS", Font.PLAIN, 25));
 		btnSiguiente.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
-				//miCan = new Cancion(0, "", "", false);
+			
 				miCan = principal.buscarCancionPorId();
 				System.out.println("------>"+miCan.getNombre());
 				lblNewLabel.setText(miCan.getNombre()+"-->"+miCan.getCantante());
 				
-				//lblNewLabel.setText(miCan.getNombre() + "-->" + miCan.getCantante());
 				
 			}
 		});

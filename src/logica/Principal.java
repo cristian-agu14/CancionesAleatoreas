@@ -29,50 +29,50 @@ public class Principal {
 
 	}
 
-//	public static void main(String args[]) {
-//		// readTxt();
-//		// probarArray();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//		buscarCancionPorId();
-//
-//	}
+	public static void main(String args[]) {
+		// readTxt();
+		// probarArray();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+		buscarCancionPorId();
+
+	}
 
 	public static BufferedReader getBuffered(String link) {
 
